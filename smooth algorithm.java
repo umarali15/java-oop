@@ -35,3 +35,32 @@ public class temp {
         System.out.println("Smoothed temperatures = " + Arrays.toString(smooth));
     }
 }
+// main class
+import java.util.Scanner;
+public class Tem {
+
+    public static void main(String[] args) {
+      Scanner sc = new Scanner(System.in);
+
+      
+        System.out.print("Enter number of temperature readings: ");
+        int n = sc.nextInt();
+
+        int[] temps = new int[n];
+
+     
+        System.out.println("Enter the temperatures:");
+        for (int i = 0; i < n; i++) {
+            temps[i] = sc.nextInt();
+        }
+
+     
+        temp processor = new temp(temps);
+        processor.smooth();         
+        processor.displayInfo();    
+
+        sc.close();
+ 
+    }
+}
+
